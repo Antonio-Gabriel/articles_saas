@@ -13,15 +13,15 @@ repos:
             "--rcfile=.pylintrc", # Link to your config file
             "--load-plugins=pylint.extensions.docparams", # Load an extension
           ]
-  # - repo: local
-  #   hooks:
-  #     - id: pytest
-  #       name: pytest
-  #       language: system
-  #       entry: pytest -v
-  #       always_run: true
-  #       pass_filenames: false
-  #       stages: [commit]
+  - repo: local
+    hooks:
+      - id: pytest
+        name: pytest
+        language: system
+        entry: pytest -v
+        always_run: true
+        pass_filenames: false
+        stages: [commit]
   - repo: local
     hooks:
       - id: requirements
