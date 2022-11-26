@@ -1,0 +1,1 @@
+from .article_schema import article_validator_schema
