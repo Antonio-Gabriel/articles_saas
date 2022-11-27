@@ -1,0 +1,1 @@
+from .faker_article_repository import FakerArticleRepository
