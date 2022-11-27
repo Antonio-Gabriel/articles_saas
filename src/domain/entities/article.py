@@ -47,3 +47,12 @@ class Article:
         )
 
         return is_valid, errs
+
+    def __repr__(self) -> str:
+        return f"""
+            Article(
+                title={self.props.title}, summary={self.props.summary}, news_site={self.props.news_site},
+                featured={self.props.featured}, url={self.props.url}, image_url={self.props.image_url}, 
+                published_at={self.props.published_at}, updated_at={self.props.updated_at}
+            )
+        """
