@@ -1,3 +1,4 @@
 from .handler.controller_handler import Request
 from .get_articles_controller import GetArticlesController
+from .create_article_controller import CreateArticleController
 from .get_article_by_id_controller import GetArticleByIdController
