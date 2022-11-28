@@ -1,3 +1,4 @@
+import os
 from contextlib import asynccontextmanager
 
 from sqlalchemy.orm import sessionmaker
@@ -8,7 +9,7 @@ class DbConnectionHandler:
     """Postgres database connection"""
 
     def __init__(self) -> None:
-        self.__connection_string = "postgresql+asyncpg://postgres:articlepwd@localhost:5432/article_db"
+        self.__connection_string = os.environ['DB_URL']
 
     @property
     def __get_engine(self):
