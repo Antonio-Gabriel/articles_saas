@@ -8,4 +8,4 @@ class UniqueId:
     @staticmethod
     def new(_id: Optional[str]) -> Optional[str]:
         """generate id method"""
-        return _id if _id is None else str(uuid4())
+        return _id if _id is not None else str(uuid4())
