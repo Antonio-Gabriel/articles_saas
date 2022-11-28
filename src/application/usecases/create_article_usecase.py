@@ -46,7 +46,7 @@ class CreateArticleUsecase:
                 status=400
             ))
 
-        resp = await self.__articles_repository.create(article=article)
+        resp = await self.__articles_repository.create(article)
         if resp:
             return Result[ResultStructure].ok(ResultStructure(
                 message=article,
