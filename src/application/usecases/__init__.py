@@ -1,3 +1,4 @@
 from .get_articles_usecase import GetArticlesUsecase
+from .update_article_usecase import UpdateArticleUsecase
 from .create_article_usecase import CreateArticleUsecase
 from .get_article_by_id_usecase import GetArticleByIdUsecase
