@@ -19,3 +19,17 @@ class ArticleSchemaReponse(BaseModel):
     class Config:
         """orm mode"""
         orm_mode = True
+
+
+class ArticleSchemaRequest(BaseModel):
+    """article request schema"""
+    title: str
+    url: str
+    summary: str
+    featured: bool
+    image_url: str
+    news_site: str
+
+    class Config:
+        """orm mode"""
+        orm_mode = True
