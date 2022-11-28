@@ -11,6 +11,7 @@ from ...controllers import (
     GetArticlesController,
     GetArticleByIdController,
     CreateArticleController,
+    UpdateArticleController,
     Request)
 
 article_route = APIRouter(prefix=os.environ["BASE_PATH"], tags=["Article"])
@@ -57,5 +58,19 @@ async def create_article(article_payload: ArticleSchemaRequest):
     article_controller = CreateArticleController()
     article = await article_controller.handle(
         Request(body=dict(article_payload))
+    )
+    return article
+
+
+@article_route.put("/articles/{article_id}",
+                   status_code=status.HTTP_200_OK,
+                   response_model=ArticleSchemaRequest,
+                   response_description="Update article"
+                   )
+async def update_article(article_id: UUID, article_payload: ArticleSchemaRequest):
+    """update article endpoint"""
+    article_controller = UpdateArticleController()
+    article = await article_controller.handle(
+        Request(body=dict(article_payload), params=[article_id])
     )
     return article
