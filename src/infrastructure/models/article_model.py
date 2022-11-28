@@ -27,8 +27,9 @@ class ArticleModel(Base):
     def __repr__(self) -> str:
         return f"""
             ArticleModel(
-                title={self.title}, summary={self.summary}, news_site={self.news_site},
-                featured={self.featured}, url={self.url}, image_url={self.image_url}, 
-                published_at={self.published_at}, updated_at={self.updated_at}
+                id={self.id}, title={self.title}, summary={self.summary}, 
+                news_site={self.news_site}, featured={self.featured}, url={self.url}, 
+                image_url={self.image_url}, published_at={self.published_at}, 
+                updated_at={self.updated_at}
             )
         """
