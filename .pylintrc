@@ -1,7 +1,8 @@
 [MAIN]
 
 disable=
-      C0114 # missing-module-docstring
+      C0114, # missing-module-docstring
+      R0903  # too-few-public-methods
 
 # Analyse import fallback blocks. This can be used to support both Python 2 and
 # 3 compatible code, which means that the block might have code that exists
@@ -330,7 +331,7 @@ indent-after-paren=4
 indent-string='    '
 
 # Maximum number of characters on a single line.
-max-line-length=100
+max-line-length=200
 
 # Maximum number of lines in a module.
 max-module-lines=1000
