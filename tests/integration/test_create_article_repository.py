@@ -8,7 +8,13 @@ from src.infrastructure.repositories import ArticleRepository
 @pytest.mark.asyncio
 @pytest.mark.skip
 async def test_create_article_repository():
-    """should be return a entity"""
+    """should be return a entity
+
+    if you wanna test this endpoint alter environ url on 
+    infrastructure/database/postgres/db_connection_handler to
+
+    "postgresql+asyncpg://postgres:articlepwd@localhost:5432/article_db"
+    """
 
     article = ArticleAdapter.create(
         title="SpaceX launches new cargo Dragon spacecraft to space station",
@@ -21,5 +27,5 @@ async def test_create_article_repository():
 
     repository = ArticleRepository()
     result = await repository.create(article)
-    
-    assert result.props.news_site == "SpaceNews"    
+
+    assert result.props.news_site == "SpaceNews"
