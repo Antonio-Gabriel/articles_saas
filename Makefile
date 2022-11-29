@@ -1,4 +1,7 @@
-migrations:
+migration:
+	alembic revision --autogenerate -m "create article model"
+
+migrate:
 	alembic upgrade heads
 
 seeds:
