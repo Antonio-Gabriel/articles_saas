@@ -2,4 +2,5 @@ from .handler.controller_handler import Request
 from .get_articles_controller import GetArticlesController
 from .update_article_controller import UpdateArticleController
 from .create_article_controller import CreateArticleController
+from .delete_article_controller import DeleteArticleController
 from .get_article_by_id_controller import GetArticleByIdController
