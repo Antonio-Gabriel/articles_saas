@@ -86,9 +86,9 @@ $ sudo docker-compose up --build
 # The server will initialize in the <http://0.0.0.0:8001>
 ```
 
-If any error occurred you can check on log:
+To check the logs of the activities being done in the application you just need to check the logs file with you in:
 
-[Logs file](src/application/security/logs/logs.log)
+[Logs file](src/application/security/logs/)
 
 Endpoint for see the documentation
 
