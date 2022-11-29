@@ -1,5 +1,3 @@
-import uvicorn
-
 from fastapi import FastAPI, status
 from fastapi.responses import JSONResponse
 from fastapi.middleware.cors import CORSMiddleware
@@ -36,4 +34,4 @@ app.include_router(article_route)
 
 
 if __name__ == "__main__":
-    uvicorn.run(app, host="0.0.0.0", port=8000)
+    app.run()
