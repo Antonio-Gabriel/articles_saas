@@ -83,8 +83,12 @@ $ cd articles_saas
 # Build the application
 $ sudo docker-compose up --build
 
-# The server will initialize in the <http://localhost:8001>
+# The server will initialize in the <http://0.0.0.0:8001>
 ```
+
+If any error occurred you can check on log:
+
+[Logs file](src/application/security/logs/logs.log)
 
 Endpoint for see the documentation
 
