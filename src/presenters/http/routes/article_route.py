@@ -12,6 +12,7 @@ from ...controllers import (
     GetArticleByIdController,
     CreateArticleController,
     UpdateArticleController,
+    DeleteArticleController,
     Request)
 
 article_route = APIRouter(prefix=os.environ["BASE_PATH"], tags=["Article"])
@@ -72,5 +73,18 @@ async def update_article(article_id: UUID, article_payload: ArticleSchemaRequest
     article_controller = UpdateArticleController()
     article = await article_controller.handle(
         Request(body=dict(article_payload), params=[article_id])
+    )
+    return article
+
+
+@article_route.delete("/articles/{article_id}",
+                      status_code=status.HTTP_200_OK,
+                      response_description="Update article"
+                      )
+async def delete_article(article_id: UUID):
+    """delete article endpoint"""
+    article_controller = DeleteArticleController()
+    article = await article_controller.handle(
+        Request(params=[article_id])
     )
     return article
